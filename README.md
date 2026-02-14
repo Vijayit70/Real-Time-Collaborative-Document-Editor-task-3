@@ -1,70 +1,91 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📌 Project Overview
+This project is a Real-Time Collaborative Document Editor that allows multiple users to edit the same document simultaneously. All changes are synchronized instantly across connected clients using Socket.IO, and the document content is persisted in MongoDB to ensure data is not lost on page refresh or server restart.
+________________________________________
+🚀 Features
+•	Real-time collaborative editing
+•	Multiple users can edit simultaneously
+•	Changes reflect instantly across all browsers
+•	Persistent data storage using MongoDB
+•	React-based dynamic and responsive UI
+•	Node.js backend with WebSocket communication
+________________________________________
+🛠️ Technologies Used
+Frontend
+•	React.js
+•	Socket.IO Client
+•	HTML, CSS, JavaScript
+Backend
+•	Node.js
+•	Express.js
+•	Socket.IO
+Database
+•	MongoDB (using Mongoose)
+________________________________________
+⚙️ Project Architecture
+Frontend (React)
+   ↓  (Socket.IO)
+Backend (Node.js + Express)
+   ↓
+MongoDB (Persistent Storage)
+________________________________________
+📂 Project Structure
+task3-collab-editor/
+│
+├── backend/
+│   ├── models/
+│   │   └── Document.js
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   └── App.js
+│   └── package.json
+________________________________________
+🔄 How It Works
+1.	User types in the editor
+2.	Changes are emitted using Socket.IO
+3.	Backend broadcasts changes to all connected users
+4.	Content is saved in MongoDB
+5.	On page reload or server restart, saved content is loaded from MongoDB
+________________________________________
+🧠 Data Persistence Explanation
+The document content is stored in MongoDB.
+Even if the backend server is restarted or the page is refreshed, the document content remains intact because it is fetched from the database when the application starts.
+________________________________________
+▶️ How to Run the Project
+Prerequisites
+•	Node.js installed
+•	MongoDB running locally
+________________________________________
+🔹 Start Backend
+cd backend
+npm install
+node server.js
+Backend runs on:
+http://localhost:5000
+________________________________________
+🔹 Start Frontend
+cd frontend
+npm install
+npm start
+Frontend runs on:
+http://localhost:3000
+________________________________________
+🧪 Testing the Application
+•	Open the app in two different browsers or incognito windows
+•	Type in one window
+•	Changes will appear instantly in the other window
+•	Restart backend and refresh page — content will still be available
+________________________________________
+✅ Task Requirements Fulfilled
+Requirement	Status
+React / Vue UI	✅
+Real-time collaboration	✅
+WebSocket / Socket.IO	✅
+Backend framework	✅
+MongoDB storage	✅
+Persistent data	✅
+________________________________________
+📌 Conclusion
+This project demonstrates a full-stack real-time collaborative application using modern web technologies. It successfully fulfills all the requirements of Task 3 by integrating frontend, backend, real-time communication, and persistent database storage.
