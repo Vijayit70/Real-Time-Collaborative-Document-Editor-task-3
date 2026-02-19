@@ -1,3 +1,4 @@
+**Real-Time-Collaborative- Editor- task-3**
 
 *COMPANY* : CODTECH IT SOLUTIONS
 
@@ -86,6 +87,13 @@ npm start
 Frontend runs on:
 http://localhost:3000
 ________________________________________
+
+**Output**
+
+<img width="1920" height="1080" alt="task3(1)" src="https://github.com/user-attachments/assets/4a23d3e9-a0d2-40af-833c-58aceb364873" />
+<img width="1920" height="1080" alt="task3" src="https://github.com/user-attachments/assets/a41817c1-4995-4cf3-b2c2-0edd3378dc7c" />
+<img width="1920" height="1080" alt="task3(inco)" src="https://github.com/user-attachments/assets/02168ea8-a913-4c54-a274-ad4e17d643e7" />
+
 🧪 Testing the Application
 •	Open the app in two different browsers or incognito windows
 •	Type in one window
@@ -103,3 +111,7 @@ Persistent data	✅
 ________________________________________
 📌 Conclusion
 This project demonstrates a full-stack real-time collaborative application using modern web technologies. It successfully fulfills all the requirements of Task 3 by integrating frontend, backend, real-time communication, and persistent database storage.
+
+Author 
+
+Vijay Tiwari
